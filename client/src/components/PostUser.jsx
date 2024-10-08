@@ -1,8 +1,9 @@
 import React from "react";
 import { MessageSquare } from "lucide-react";
 import { Heart } from "lucide-react";
+import { Trash2 } from "lucide-react";
 
-function Post({ src, text }) {
+function PostUser({ src, text }) {
   return (
     <div className="flex flex-row border-b-2 border-[#283036] mt-2">
       <div className="w-1/3 pl-2 flex flex-col items-center justify-start">
@@ -25,13 +26,12 @@ function Post({ src, text }) {
           </div>
           <div className="flex flex-row space-x-0.5 items-center justify-center">
             <div>
-              <Heart
-                onClick={() => setCount(count + 1)}
-                color="#1D9BF0"
-                className="h-3 w-3"
-              />
+              <Heart color="#1D9BF0" className="h-3 w-3" />
             </div>
-            <div className="text-xs text-[#565B5F]">12k</div>
+            <div className="text-xs text-[#565B5F]">10k</div>
+          </div>
+          <div className="flex flex-row space-x-0.5 items-center justify-center">
+            <Trash2 color="#1D9BF0" className="h-3 w-3" />
           </div>
         </div>
       </div>
@@ -39,4 +39,4 @@ function Post({ src, text }) {
   );
 }
 
-export default Post;
+export default PostUser;

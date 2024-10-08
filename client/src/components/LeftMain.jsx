@@ -2,6 +2,7 @@ import React from "react";
 import { House } from "lucide-react";
 import { User } from "lucide-react";
 import { Settings } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function LeftMain() {
   return (
@@ -13,18 +14,28 @@ function LeftMain() {
           className="h-[20%] w-[20%] mb-10 mt-7"
         />
         <div className="flex flex-col space-y-10 items-start">
-          <div className="flex flex-row space-x-4 justify-center items-center text-2xl text-white font-regular hover:text-[#1D9BF0] hover:font-medium hover:cursor-pointer">
+          <Link
+            to="/home"
+            className="flex flex-row space-x-4 justify-center items-center text-2xl text-white font-regular hover:text-[#1D9BF0] hover:font-medium hover:cursor-pointer"
+          >
             <House className="w-6 h-6" />
             <p>Home</p>
-          </div>
-          <div className="flex flex-row space-x-4 justify-center items-center text-2xl text-white font-regular hover:text-[#1D9BF0] hover:font-medium hover:cursor-pointer">
+          </Link>
+
+          <Link
+            to="/user"
+            className="flex flex-row space-x-4 justify-center items-center text-2xl text-white font-regular hover:text-[#1D9BF0] hover:font-medium hover:cursor-pointer"
+          >
             <User className="w-6 h-6" />
             <p>Profile</p>
-          </div>
-          <div className="flex flex-row space-x-4 justify-center items-center text-2xl text-white font-regular hover:text-[#1D9BF0] hover:font-medium hover:cursor-pointer">
+          </Link>
+          <Link
+            to="/settings"
+            className="flex flex-row space-x-4 justify-center items-center text-2xl text-white font-regular hover:text-[#1D9BF0] hover:font-medium hover:cursor-pointer"
+          >
             <Settings className="w-6 h-6" />
             <p>Settings</p>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

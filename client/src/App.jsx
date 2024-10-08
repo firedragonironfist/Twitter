@@ -4,6 +4,9 @@ import Landing from "./pages/Landing";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import Home from "./pages/Home";
+import User from "./pages/User";
+import Settings from "./pages/Settings";
+import OtherUser from "./pages/OtherUser";
 
 function App() {
   const router = createBrowserRouter([
@@ -22,6 +25,18 @@ function App() {
     {
       path: "/home",
       element: <Home />,
+    },
+    {
+      path: "/user",
+      element: <User />,
+    },
+    {
+      path: "/settings",
+      element: <Settings />,
+    },
+    {
+      path: "/otheruser",
+      element: <OtherUser />,
     },
   ]);
   return (
